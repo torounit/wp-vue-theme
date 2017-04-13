@@ -1,6 +1,5 @@
-import {ADD_POST, TOGGLE_POST, DELETE_POST, FETCH_POST, SELECT_FILTER} from './mutation-types';
+import {ADD_POST, FETCH_POST, SELECT_POST} from './mutation-types';
 import WPAPI from 'wpapi'
-//import WP from '../../../node_modules/wpapi/browser/wpapi';
 const wp = new WPAPI({ endpoint: '/wp-json/' });
 export const fetchPost = async ({commit}) => {
   let posts = await wp.posts()
@@ -17,20 +16,6 @@ export const addPost = ({commit}, text) => {
   }
 }
 
-export const togglePost = ({commit}, todo) => {
-  commit(TOGGLE_POST, {
-    todo
-  })
-}
-
-export const deletePost = ({commit}, todo) => {
-  commit(DELETE_POST, {
-    todo
-  })
-}
-
-export const selectFilter = ({commit}, filter) => {
-  commit(SELECT_FILTER, {
-    filter
-  })
+export const selectPost = ({commit}, post) => {
+  commit(SELECT_POST, post)
 }

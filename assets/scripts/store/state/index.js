@@ -1,4 +1,4 @@
 export default {
   posts: [],
-  filter: 'ALL'
+  postId: 0
 }

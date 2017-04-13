@@ -1,7 +1,9 @@
 <template>
   <div class="Post">
-    {{ post }}
-    <div class="Post__title">{{ post.title.rendered }}</div>
+    <h3 class="Post__title">{{ post.title.rendered }}</h3>
+    <div>
+      {{ post.content.rendered }}
+    </div>
   </div>
 
 </template>
@@ -10,7 +12,14 @@
   export default {
     name: 'Post',
     props: {
-      post: {}
+      post: {
+        title: {
+          rendered: ''
+        },
+        content: {
+          rendered: ''
+        }
+      }
     }
   }
 </script>
@@ -21,11 +30,6 @@
     width 100%;
     box-sizing border-box;
     box-shadow 0 1px 1px #ccc
-    display flex
   }
 
-  .Post__text {
-    padding 0 4px
-    flex: 1 0 auto;
-  }
 </style>

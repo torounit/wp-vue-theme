@@ -18,14 +18,14 @@
 
     &::before,
     &::after {
-       content: '';
-       position: absolute;
-       height: 2px;
-       width: 100%;
-       top: 50%;
-       left: 0;
-       margin-top: -1px;
-       background: #000;
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      background: #000;
     }
     &::before {
       transform: rotate(45deg);

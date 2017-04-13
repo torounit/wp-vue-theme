@@ -1,30 +1,13 @@
 <template>
   <div class="App">
-    <Post
-        v-for="post in posts"
-        :key="post.id"
-        v-bind:post="post"
-    />
+    <router-view class="view"></router-view>
   </div>
 </template>
 
 <script>
-  import Post from './components/Post.vue'
   export default {
     name: 'App',
-    components: {
-	  Post
-    },
-    data () {
-      return {
-        value: '',
-      }
-    },
-    computed: {
-	  posts () {
-		return this.$store.state.posts
-	  },
-    }
+    components: {}
   }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
@@ -50,6 +33,7 @@
       background-color: #fff
     }
   }
+
   .App__box {
     margin: 16px 0
     display block

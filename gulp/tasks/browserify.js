@@ -33,7 +33,6 @@ import debug from 'gulp-debug';
 var b = browserify(config.browserify.bundleOption)
 	.transform(babelify.configure({
 		compact: false,
-		presets: ["latest"],
 		plugins: ["transform-runtime"]
 	}))
 	.transform(browserifyShim)
