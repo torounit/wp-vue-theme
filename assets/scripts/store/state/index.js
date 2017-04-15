@@ -1,4 +1,12 @@
 export default {
   posts: [],
-  postId: 0
+  post: {
+    id: 0,
+    title: {
+      rendered: ''
+    },
+    content:{
+      rendered: '',
+    }
+  }
 }

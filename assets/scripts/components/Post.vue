@@ -1,9 +1,7 @@
 <template>
   <div class="Post">
     <h3 class="Post__title">{{ post.title.rendered }}</h3>
-    <div>
-      {{ post.content.rendered }}
-    </div>
+    <div v-html=post.content.rendered></div>
   </div>
 
 </template>

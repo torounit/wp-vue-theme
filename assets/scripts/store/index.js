@@ -18,5 +18,5 @@ const store = new Vuex.Store({
   actions
 });
 
-store.dispatch('fetchPost')
+store.dispatch('initPosts')
 export default store;

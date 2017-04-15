@@ -1,14 +1,14 @@
 <template>
-  <Post :post="post"></Post>
+  <Single :post="post"></Single>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
-  import Post from '../components/Post.vue'
+  import Single from './templates/Single.vue'
   export default {
-    name: 'Single',
+    name: 'Singular',
     components: {
-      Post
+      Single
     },
     computed: mapGetters(['post'])
   }

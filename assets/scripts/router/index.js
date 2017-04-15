@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '../pages/Index.vue';
-import Single from '../pages/Single.vue';
+import Singular from '../pages/Singular.vue';
+import config from '../config'
 
 Vue.use(VueRouter);
 
@@ -9,12 +10,17 @@ const routes = [
   {
     path: '/',
     name: 'index',
-    component: Index
+    component: config.pageOnFront ? Singular : Index
+  },
+  {
+    path: '/category/**',
+    name: 'category',
+    component: Index,
   },
   {
     path: '/**',
-    name: 'post',
-    component: Single,
+    name: 'singular',
+    component: Singular,
   },
 ];
 
